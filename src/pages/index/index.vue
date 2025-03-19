@@ -1,17 +1,15 @@
 <script setup lang="ts">
-import ToastManager from '@/utils/toastUtil/ToastManager'
+import { instance } from '@/utils/http'
 
-function onClick() {
-  ToastManager.text('主要按钮')
+async function onClick() {
+  await instance.get('/api')
 }
 </script>
 
 <template>
-  <AppLogos />
   <nut-button type="primary" @click="onClick">
     主要按钮
   </nut-button>
-  <InputEntry />
 </template>
 
 <style></style>

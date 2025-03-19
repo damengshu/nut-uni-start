@@ -479,7 +479,6 @@ declare module 'vue' {
     readonly useCloned: UnwrapRef<typeof import('@vueuse/core')['useCloned']>
     readonly useColorMode: UnwrapRef<typeof import('@vueuse/core')['useColorMode']>
     readonly useConfirmDialog: UnwrapRef<typeof import('@vueuse/core')['useConfirmDialog']>
-    readonly useCount: UnwrapRef<typeof import('./composables/useCount')['useCount']>
     readonly useCounter: UnwrapRef<typeof import('@vueuse/core')['useCounter']>
     readonly useCssModule: UnwrapRef<typeof import('vue')['useCssModule']>
     readonly useCssVar: UnwrapRef<typeof import('@vueuse/core')['useCssVar']>

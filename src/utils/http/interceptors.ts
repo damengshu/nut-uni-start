@@ -22,10 +22,7 @@ export function responseInterceptor(response: any): any {
 export function responseErrorInterceptor(error: any): Promise<any> {
   // interceptor logic
   if (error.message === 'request:fail timeout') {
-    ToastManager.success('请求超时', {
-      duration: 2000,
-      icon: 'none',
-    })
+    ToastManager.error('请求超时')
   }
   return Promise.reject(error)
 }

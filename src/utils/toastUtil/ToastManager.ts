@@ -26,4 +26,34 @@ export default class ToastManager {
 
     instance?.success(message, options)
   }
+
+  public static async error(
+    message: string,
+    options?: ToastOptions,
+  ): Promise<void> {
+    const instance: ToastInst | null = await ToastManager.instance()
+
+    instance?.error(message, options)
+  }
+
+  public static async warning(
+    message: string,
+    options?: ToastOptions,
+  ): Promise<void> {
+    const instance: ToastInst | null = await ToastManager.instance()
+    instance?.warning(message, options)
+  }
+
+  public static async loading(
+    message: string,
+    options?: ToastOptions,
+  ): Promise<void> {
+    const instance: ToastInst | null = await ToastManager.instance()
+    instance?.loading(message, options)
+  }
+
+  public static async hide(): Promise<void> {
+    const instance: ToastInst | null = await ToastManager.instance()
+    instance?.hide()
+  }
 }
