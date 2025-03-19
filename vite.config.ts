@@ -3,6 +3,7 @@ import UniHelperComponents from '@uni-helper/vite-plugin-uni-components'
 import UniHelperLayouts from '@uni-helper/vite-plugin-uni-layouts'
 import UniHelperManifest from '@uni-helper/vite-plugin-uni-manifest'
 import UniHelperPages from '@uni-helper/vite-plugin-uni-pages'
+import { NutResolver } from 'nutui-uniapp'
 import AutoImport from 'unplugin-auto-import/vite'
 import { defineConfig } from 'vite'
 import UniPolyfill from 'vite-plugin-uni-polyfill'
@@ -20,6 +21,9 @@ export default async () => {
       UniHelperComponents({
         dts: 'src/components.d.ts',
         directoryAsNamespace: true,
+        resolvers: [
+          NutResolver(),
+        ],
       }),
       Uni(),
       UniPolyfill(),

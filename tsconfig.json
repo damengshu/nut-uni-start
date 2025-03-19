@@ -1,22 +1,39 @@
 {
   "extends": "@vue/tsconfig/tsconfig.json",
   "compilerOptions": {
-    "lib": ["ESNext", "DOM", "DOM.Iterable"],
+    "target": "ESNext",
+    "lib": [
+      "esnext",
+      "dom"
+    ],
     "baseUrl": ".",
+    "module": "ESNext",
+    "moduleResolution": "Node",
     "paths": {
-      "@/*": ["./src/*"]
+      "@/*": [
+        "./src/*"
+      ]
     },
     "types": [
       "@dcloudio/types",
       "@mini-types/alipay",
       "miniprogram-api-typings",
-      "@uni-helper/uni-types"
+      "@uni-helper/uni-types",
+      "vite/client",
+      "@uni-helper/uni-app-types",
+      "nutui-uniapp/global.d.ts"
     ],
-    "sourceMap": true
+    "strict": true,
+    "sourceMap": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "verbatimModuleSyntax": true,
+    "skipLibCheck": true
   },
   "vueCompilerOptions": {
-    // 调整 Volar（Vue 语言服务工具）解析行为，用于为 uni-app 组件提供 TypeScript 类型
-    "plugins": ["@uni-helper/uni-types/volar-plugin"]
+    "plugins": [
+      "@uni-helper/uni-app-types/volar-plugin"
+    ]
   },
   "include": [
     "src/**/*.ts",
