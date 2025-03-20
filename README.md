@@ -1,13 +1,8 @@
-<p align="center">
-  <img src="https://github.com/uni-helper/vitesse-uni-app/raw/main/.github/images/preview.png" width="300"/>
-</p>
-
 <h2 align="center">
-Vitesse for uni-app
+ledao-crm-client
 </h2>
 <p align="center">
-  <a href="https://vitesse-uni-app.netlify.app/">📱 在线预览</a>
-  <a href="https://vitesse-docs.netlify.app/">📖 阅读文档</a>
+  <a href="https://vitesse-docs.netlify.app/">📖 启动文档</a>
 </p>
 
 ## 特性
