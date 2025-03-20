@@ -1,19 +1,40 @@
 <script setup lang="ts">
-import { instance } from '@/utils/http'
-
-async function onClick() {
-  await instance.get('/api')
-}
+onLoad(() => {
+})
 </script>
 
 <template>
-  <nut-button type="primary" @click="onClick">
-    主要按钮
-  </nut-button>
+  <view>
+    <nut-button type="primary">
+      主要按钮
+    </nut-button>
+    <nut-button type="info">
+      信息按钮
+    </nut-button>
+    <nut-button type="default">
+      默认按钮
+    </nut-button>
+    <nut-button type="danger">
+      危险按钮
+    </nut-button>
+    <nut-button type="warning">
+      警告按钮
+    </nut-button>
+    <nut-button type="success">
+      成功按钮
+    </nut-button>
+    <view v-for="item in 100" :key="item">
+      111111
+    </view>
+  </view>
 </template>
 
 <style></style>
 
 <route type="home" lang="json">
-{}
+{
+  "style": {
+    "navigationBarTitleText": "合约"
+   }
+}
 </route>
