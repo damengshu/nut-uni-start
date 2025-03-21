@@ -1,11 +1,16 @@
 <script setup lang="ts">
 onLoad(() => {
 })
+function handleClick() {
+  uni.navigateTo({
+    url: '/pages/testBarCode/index',
+  })
+}
 </script>
 
 <template>
   <view>
-    <nut-button type="primary">
+    <nut-button type="primary" @click="handleClick">
       主要按钮
     </nut-button>
     <nut-button type="info">
@@ -34,7 +39,7 @@ onLoad(() => {
 <route type="home" lang="json">
 {
   "style": {
-    "navigationBarTitleText": "合约"
+    "navigationBarTitleText": "首页"
    }
 }
 </route>
